@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <div>自动化构建travis CI</div>
+    <div>自动化构建travis faewfwCI</div>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
