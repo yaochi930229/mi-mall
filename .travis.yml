@@ -2,17 +2,16 @@ language: node_js
 node_js:
   - 10.16.3
 
-cache: npm
-
 install:
-  - npm ci
+  - npm install
 
 script: npm run build
-
-deploy:
-provider: pages
-skip_cleanup: true
-github_token: $gi-val
-local_dir: dist
-on:
-  branch: master
+after_script:
+  - cd ./dist
+  - git init
+  - git add -A
+  - git commit -m 'deploy'
+  - git push -f git@github.com:yaochi930229/mi-mall.git master:gh-pages
+branches:
+  only:
+    - master
